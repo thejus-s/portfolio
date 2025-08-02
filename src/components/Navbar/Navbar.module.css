@@ -1,0 +1,77 @@
+@import "../../vars.css";
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 61px;
+    z-index: 2;
+    margin: 0 10%;
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+}
+
+.menuItems {
+    display: flex;
+    gap: 47px;
+    list-style: none;
+}
+
+.menuItems a {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.menuBtn{
+    display: none;
+}
+
+@media screen and (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-right: 10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+    }
+
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menuItems {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #19376D;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(25, 55, 109, 0.20) 0.1%, #19376D 99.9%);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        padding: 24px 34px;
+        gap: 13px;
+    }
+    .menuOpen{
+        display: flex;
+        z-index: 1;
+    }
+}
