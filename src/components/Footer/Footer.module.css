@@ -1,0 +1,75 @@
+@import '../../vars.css';
+
+.container {
+    color: var(--color-text);
+    display: flex;
+    margin-top: 120px;
+    background-color: var(--color-secondary);
+    justify-content: space-evenly;
+    width: 100vw;
+    padding: 58px 10%;
+    gap: 10px;
+}
+
+.text h2 {
+    font-size: clamp(36px, 7vw, 80px);
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.text p {
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: none;
+    gap: 26px;
+}
+
+.links li {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.links a {
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.desktop {
+    display: inline-block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width:830px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: inline-block;
+    }
+}

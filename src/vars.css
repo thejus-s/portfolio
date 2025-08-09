@@ -1,11 +1,29 @@
+@font-face{
+    font-family: "Agile";
+    src: url("/agile.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Kicaps";
+    src: url("/Kicaps.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root{
     /* colors */
     --color-text: #fff;
-    -color-primary: #576CBC;
+    --color-primary: #576CBC;
     --color-secondary: #19376D;
     --color-dark: #0B2447;
     --color-bg: #04152D;
+    --hover-btn: #455dbc;
 
     /* Fonts */
     --font-roboto: "Roboto";
+    --font-agile: "Agile";
+    --font-kicaps: "Kicaps";
+    --font-exo : "Exo 2";
 }

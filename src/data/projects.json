@@ -1,0 +1,20 @@
+[
+    {
+        "title":"TaskHive",
+        "description": "This project manages team tasks efficiently with real-time tracking, role-based access, and performance insights.",
+        "imageurl": "project.png",
+        "skills": ["Django","HTML","CSS"]
+    },
+    {
+        "title":"Librarify",
+        "description": "This project streamlines library operations with role-based access, real-time book tracking, and advanced search.",
+        "imageurl": "project.png",
+        "skills": ["Django","HTML","Tailwindcss"]
+    },
+    {
+        "title":"InkThoughts",
+        "description": "This project enables blog sharing with user authentication, post management, commenting, and a responsive UI.",
+        "imageurl": "project.png",
+        "skills": ["Django","HTML","Tailwindcss"]
+    }
+]

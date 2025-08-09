@@ -1,0 +1,70 @@
+@import '../../vars.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    /* background: linear-gradient(180deg, #576CBC -14.75%, #132A53 50.1%); */
+    /* box-shadow: 0 16px 14px 0 #04152D; */
+    padding: 18px 24px;
+    max-width: 370px;
+}
+
+.projectImg {
+    margin-bottom: 26px;
+}
+
+.title {
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+}
+
+.description {
+    margin-top: 6px;
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 400;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+    list-style-type: none;
+}
+
+.skill {
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 400;
+    background: var(--color-secondary);
+    border-radius: 100px;
+    padding: 2px 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 28px;
+    width: 100%;
+}
+
+.links a {
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 100px;
+    background: var(--color-primary);
+    padding: 1px 20px;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 600;
+    transition: .3s ease-in-out;
+}
+
+.links a:hover{
+    transform: scale(1.05);
+    background: var(--hover-btn);
+}
+
+.links a:active{
+    transform: scale(1);
+}

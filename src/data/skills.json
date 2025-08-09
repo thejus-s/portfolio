@@ -1,0 +1,34 @@
+[
+    {
+        "title" : "HTML",
+        "ImageUrl": "html.png" 
+    },
+    {
+        "title" : "CSS",
+        "ImageUrl": "css.png" 
+    },
+    {
+        "title" : "React",
+        "ImageUrl": "react.png" 
+    },
+    {
+        "title" : "JavaScript",
+        "ImageUrl": "js.png" 
+    },
+    {
+        "title" : "Python",
+        "ImageUrl": "python.png" 
+    },
+    {
+        "title" : "Django",
+        "ImageUrl": "django.png" 
+    },
+    {
+        "title" : "PostgreSQL",
+        "ImageUrl": "postgresql.png" 
+    },
+    {
+        "title" : "Figma",
+        "ImageUrl": "figma.png" 
+    }
+]
