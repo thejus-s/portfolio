@@ -210,3 +210,32 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 1430px){
+    .content{
+        align-items: center;
+    }
+    .title{
+        text-align: center;
+    }
+    .buttonGroup{
+        width: 100%;
+        justify-content: space-around;
+        gap: 16px;
+    }
+    .contactBtn{
+        text-align: center;
+    }
+    .downloadBtn{
+        text-align: center;
+    }
+    .heroImg{
+        width: 70%;
+    }
+    .mobileOnly{
+        display: inline-block;
+    }
+    .desktopOnly{
+        display: none;
+    }
+}
