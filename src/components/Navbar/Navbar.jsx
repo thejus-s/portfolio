@@ -1,29 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import styles from './Navbar.module.css'
-import { getImageUrl } from '../../Utils'
-import ShinyText from '../ReactBits/ShinyText';
+import React, { useState } from "react";
+import styles from "./Navbar.module.css";
+import { getImageUrl } from "../../Utils";
 
-function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false)
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <nav className={styles.navbar}>
-            <ShinyText text="THEJUS S" disabled={false} speed={3} className={styles.title} />
-            <div className={styles.menu}>
-                <img className={`${styles.menuBtn} ${menuOpen ? styles.menuOpen : ''}`} src={
-                    menuOpen ? getImageUrl('closebtn.png') : getImageUrl('menuIcon.png')
-                } alt="Menubtn"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                />
-                <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}>
-                    <li><a href="#about" onClick={() => setMenuOpen(!menuOpen)}>About</a></li>
-                    <li><a href="#experience" onClick={() => setMenuOpen(!menuOpen)}>Experience</a></li>
-                    <li><a href="#projects" onClick={() => setMenuOpen(!menuOpen)}>Projects</a></li>
-                    <li><a href="#contact" onClick={() => setMenuOpen(!menuOpen)}>Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    )
-}
+  return (
+    <nav className={styles.navbar}>
+      
+      <div className={styles.logo}>
+        <span>THEJUS</span>
+      </div>
+      <ul className={styles.navLinks}>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-export default Navbar
+      
+      <button 
+        className={styles.menuBtn} 
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <img 
+          src={getImageUrl("menu.svg")} 
+          alt="menu" 
+        />
+      </button>
+
+      <div className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
+        <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+        <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+        <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
+        <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

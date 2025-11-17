@@ -1,10 +1,16 @@
 [
     {
         "role": "Python Developer Intern",
-        "org":"Camerin Folks Pvt LTD",
+        "org": "Camerin Folks Pvt LTD",
         "startdate": "April, 2024",
         "enddate": "Oct, 2024",
-        "Experiences": ["Worked on developing various dynamic Websites","Worked on Librarify – Built a full‑stack library management system with real‑time tracking and role-based access."],
+        "Experiences": [
+            "Worked on developing various dynamic Websites",
+            "Worked on Librarify – Built a full‑stack library management system with real‑time tracking and role-based access.",
+            "Developed responsive user interfaces using React and modern CSS frameworks",
+            "Implemented RESTful APIs and database management with Django and PostgreSQL"
+        ],
         "logo": "CamerinFolks.png"
     }
 ]
+

@@ -1,46 +1,68 @@
-import React from 'react'
-import styles from './Experience.module.css'
-import skills from '../../data/skills.json'
-import { getImageUrl } from '../../Utils'
-import histories from '../../data/exphistory.json'
+import React from "react";
+import styles from "./Experience.module.css";
+import experiences from "../../data/exphistory.json";
+import { getImageUrl } from "../../Utils";
 
 const Experience = () => {
   return (
-    <section id='experience' className={styles.container}>
-        <h2 className={styles.title}>Experience</h2>
-        <div className={styles.content}>
-            <div className={styles.skills}>
-                {skills.map((skill,id)=>{
-                    return(
-                        <div key={id} className={styles.skill}>
-                            <div className={styles.skillImage}><img src={getImageUrl(skill.ImageUrl)} alt={skill.title} /></div>
-                            <p>{skill.title}</p>
-                        </div>
-                    )
-                }
-                )}
-            </div>
-            <ul className={styles.history}>
-                {histories.map((history,id)=>{
-                    return(
-                        <li key={id} className={styles.historyItem}>
-                            <img src={getImageUrl(history.logo)} alt={`${history.org}`} />
-                            <div className={styles.historyItemDetails}>
-                                <h3>{`${history.role}, ${history.org}`}</h3>
-                                <p>{`${history.startdate}, ${history.enddate}`}</p>
-                                <ul>{history.Experiences.map((experience,id) =>{
-                                    return <li key={id}>{experience}</li>
-                                }
-                            )}</ul>
-                            </div>
-                        </li>
-                    )
-                }
-            )}
-            </ul>
-        </div>
-    </section>
-  )
-}
+    <section id="experience" className={styles.container}>
+      <h1 className={styles.title}>Experience</h1>
+      <div className={styles.content}>
+        
+        <div className={styles.timeline}>
+          {experiences.map((exp, index) => (
+            <div key={index} className={styles.experienceItem}>
+              
+              {index !== experiences.length - 1 && (
+                <div className={styles.timelineConnector}></div>
+              )}
 
-export default Experience
+              <div className={styles.experienceCard}>
+                <div className={styles.cardHeader}>
+                  <div className={styles.logoContainer}>
+                    <img
+                      src={getImageUrl(exp.logo)}
+                      alt={`${exp.org} logo`}
+                      className={styles.logo}
+                    />
+                  </div>
+                  <div className={styles.roleInfo}>
+                    <h3 className={styles.role}>{exp.role}</h3>
+                    <p className={styles.org}>{exp.org}</p>
+                    <p className={styles.duration}>
+                      {exp.startdate} - {exp.enddate}
+                    </p>
+                  </div>
+                </div>
+
+                <div className={styles.experienceContent}>
+                  <ul className={styles.experienceList}>
+                    {exp.Experiences.map((point, pointIndex) => (
+                      <li key={pointIndex} className={styles.experiencePoint}>
+                        <div className={styles.pointMarker}></div>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className={styles.cardFooter}>
+                  <div className={styles.skillTags}>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>PostgreSQL</span>
+                    <span>React</span>
+                    <span>Full Stack</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

@@ -13,18 +13,20 @@ const Footer = () => {
             <li>
                 <img src={getImageUrl("mail.png")} alt="email" />
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sthejus47@gmail.com" target='_blank' rel='noopener noreferrer' className={styles.desktop} >sthejus47@gmail.com</a>
-
                 <a href="mailto:sthejus47@gmail.com" className={styles.mobile}>sthejus47@gmail.com</a>
             </li>
             <li>
                 <img src={getImageUrl("linkedin.png")} alt="LinkedIn" />
-                <a href="https://www.linkedin.com/in/thejs/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/thejs/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>
             </li>
             <li>
                 <img src={getImageUrl("git.png")} alt="GitHub" />
-                <a href="https://github.com/thejus-s">GitHub</a>
+                <a href="https://github.com/thejus-s" target='_blank' rel='noopener noreferrer'>GitHub</a>
             </li>
         </ul>
+        <div className={styles.copyright}>
+            <p>&copy; 2024 Thejus. All rights reserved.</p>
+        </div>
     </footer>
   )
 }
