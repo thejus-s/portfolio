@@ -412,6 +412,7 @@
   display: flex;
   gap: var(--spacing-md);
   padding: var(--spacing-sm) 0;
+  margin: 10px;
 }
 
 .techItem {
@@ -596,6 +597,7 @@
   }
   
   .mainTitle {
+    width: 100%;
     font-size: clamp(2rem, 8vw, 3rem);
   }
   
@@ -623,14 +625,16 @@
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: var(--font-size-xs);
   }
+
 }
 
 @media (max-width: 480px) {
   .mainTitle {
-    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    font-size: clamp(2rem, 10vw, 1.5rem);
   }
   
   .subtitle {
+    max-width: 420px;
     font-size: var(--font-size-sm);
   }
   
