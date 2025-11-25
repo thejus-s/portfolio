@@ -5,7 +5,26 @@ import { getImageUrl } from "../../Utils";
 const About = () => {
   return (
     <section id='about' className={styles.container}>
-      <h1 className={styles.title}>About Me</h1>
+      {/* Background Elements */}
+      <div className={styles.backgroundElements}>
+        <div className={styles.gradientOrb}></div>
+        <div className={styles.gradientOrb2}></div>
+        <div className={styles.gridPattern}></div>
+        <div className={styles.floatingShapes}>
+          <div className={styles.shape1}></div>
+          <div className={styles.shape2}></div>
+          <div className={styles.shape3}></div>
+          <div className={styles.shape4}></div>
+        </div>
+        <div className={styles.animatedDots}></div>
+        <div className={styles.circuitLines}></div>
+      </div>
+
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.title}>About Me</h2>
+        <p className={styles.subtitle}>Passionate developer crafting digital experiences with modern technologies</p>
+      </div>
+
       <div className={styles.content}>
         
         <div className={styles.profileSection}>
@@ -16,6 +35,7 @@ const About = () => {
               className={styles.profileImage}
             />
             <div className={styles.imageGlow}></div>
+            <div className={styles.imageBorderGlow}></div>
           </div>
           
           <div className={styles.intro}>
@@ -33,12 +53,16 @@ const About = () => {
                 <span className={styles.number}>5+</span>
                 <span className={styles.label}>Technologies</span>
               </div>
+              <div className={styles.stat}>
+                <span className={styles.number}>1+</span>
+                <span className={styles.label}>Years Experience</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
+        <div className={styles.aboutGrid}>
+          <div className={styles.aboutItem}>
             <div className={styles.itemHeader}>
               <div className={styles.icon}>⚡</div>
               <h3>Frontend Developer</h3>
@@ -53,9 +77,10 @@ const About = () => {
                 <span>Tailwind</span>
               </div>
             </div>
-          </li>
+            <div className={styles.itemGlow}></div>
+          </div>
 
-          <li className={styles.aboutItem}>
+          <div className={styles.aboutItem}>
             <div className={styles.itemHeader}>
               <div className={styles.icon}>🔧</div>
               <h3>Backend Developer</h3>
@@ -70,9 +95,10 @@ const About = () => {
                 <span>Authentication</span>
               </div>
             </div>
-          </li>
+            <div className={styles.itemGlow}></div>
+          </div>
 
-          <li className={styles.aboutItem}>
+          <div className={styles.aboutItem}>
             <div className={styles.itemHeader}>
               <div className={styles.icon}>🎨</div>
               <h3>Full Stack Solutions</h3>
@@ -87,8 +113,9 @@ const About = () => {
                 <span>Agile</span>
               </div>
             </div>
-          </li>
-        </ul>
+            <div className={styles.itemGlow}></div>
+          </div>
+        </div>
 
       </div>
     </section>
